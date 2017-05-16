@@ -1,0 +1,16 @@
+P f:
+
+# Testa o comando while
+
+N p, b;
+p = 1;
+b = 1;
+
+# Falta valor depois de <
+W b <  {
+    R 'This generation has ' , b , ' babies';
+    # Falta ;
+    p = b
+    b = p + b;
+}
+E

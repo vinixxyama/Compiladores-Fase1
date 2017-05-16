@@ -1,0 +1,6 @@
+P p:
+
+# Falta fechar aspas no print
+R 'Hello, world!;
+
+E

@@ -1,0 +1,32 @@
+P g:
+
+N u, s, n;
+S a;
+
+u = 0;
+s = 0;
+a = 'Henry';
+n = 9;
+
+R 'Well, ' , a , ', I am thinking of a n between 1 and 9.';
+
+W u < 9 {
+
+    s = s + 2;
+
+    u = u + 1;
+
+    # Falta operador de comparacao
+    I s n {
+        R 'Your s is too low.';
+    }
+
+    # Falta o fecha chaves do else
+    I s > n {
+        B;
+    
+}
+
+R 'Nope. The n I was thinking of was ' , n;
+
+E
