@@ -30,12 +30,19 @@ linguagem são exibidos entre aspas simples. Elementos da notação da gramátic
 ’S’ ’string’
 
 Program ::= ’P’ Name ’:’ Body ’E’
+
 Body ::= [Declaration] Stmt {Stmt}
+
 Declaration ::= Type Name{’,’ Name} {’;’ Type Name{’,’ Name}} ’;’
+
 Stmt ::= SimpleStmt | CompoundStmt
+
 SimpleStmt ::= ExprStmt | PrintStmt | BreakStmt
+
 ExprStmt ::= Name ’=’ Comparison ’;’
+
 PrintStmt ::= ’R’ Comparison {’,’ Comparison} ’;’
+
 BreakStmt ::= ’B’ ’;’
 CompoundStmt ::= IfStmt | WhileStmt
 IfStmt ::= ’I’ Comparison ’{’ {Stmt} ’}’ [’L’ ’{’ {Stmt} ’}’]
