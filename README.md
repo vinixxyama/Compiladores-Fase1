@@ -10,7 +10,7 @@ as próximas etapas do trabalho, podendo sofrer alterações em certas regras de
 
 Essa seção define a gramática a ser implementada. As palavras reservadas e símbolos da
 linguagem são exibidos entre aspas simples. Elementos da notação da gramática:
-• Uma sequência de símbolos entre { e } pode ser repetida zero ou mais vezes;
+	• Uma sequência de símbolos entre { e } pode ser repetida zero ou mais vezes;
 • Uma sequência de símbolos entre [ e ] é opcional;
 • Regras de produção alternativas são separadas por |.
 • Comentários devem ser iniciados por ’#’ e terminam com ’\n’.
@@ -34,6 +34,7 @@ Program ::= ’P’ Name ’:’ Body ’E’
 Body ::= [Declaration] Stmt {Stmt}
 
 Declaration ::= Type Name{’,’ Name} {’;’ Type Name{’,’ Name}} ’;’
+
 Stmt ::= SimpleStmt | CompoundStmt
 
 SimpleStmt ::= ExprStmt | PrintStmt | BreakStmt
