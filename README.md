@@ -34,7 +34,6 @@ Program ::= ’P’ Name ’:’ Body ’E’
 Body ::= [Declaration] Stmt {Stmt}
 
 Declaration ::= Type Name{’,’ Name} {’;’ Type Name{’,’ Name}} ’;’
-
 Stmt ::= SimpleStmt | CompoundStmt
 
 SimpleStmt ::= ExprStmt | PrintStmt | BreakStmt
@@ -44,13 +43,21 @@ ExprStmt ::= Name ’=’ Comparison ’;’
 PrintStmt ::= ’R’ Comparison {’,’ Comparison} ’;’
 
 BreakStmt ::= ’B’ ’;’
+
 CompoundStmt ::= IfStmt | WhileStmt
+
 IfStmt ::= ’I’ Comparison ’{’ {Stmt} ’}’ [’L’ ’{’ {Stmt} ’}’]
+
 WhileStmt ::= ’W’ Comparison ’{’ {Stmt} ’}’
+
 Comparison ::= Expr [CompOp Expr]
+
 CompOp ::= ’<’ | ’>’
+
 Expr ::= Term {(’+’ | ’-’) Term}
+
 Term ::= Factor {(’*’ | ’/’) Factor}
+
 Factor ::= Name | Number | String
 Type ::= ’N’ | ’F’ | ’S’
 Number ::= [’+’ | ’-’] Digit [’.’ Digit]
